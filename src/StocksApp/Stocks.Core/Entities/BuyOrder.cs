@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Stocks.Core.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -23,5 +24,10 @@ namespace Stocks.Core.Entities
 
         [Range(1, 10000, ErrorMessage = "Value should be {0} minimum and {1} maximum")]
         public double Price { get; set; }
+
+        public BuyOrderResponse ToBuyOrderResponse()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
